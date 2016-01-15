@@ -61,6 +61,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-how-to-restart-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/15/how-to-restart-hexo/" class="article-date">
+  <time datetime="2016-01-15T05:21:39.000Z" itemprop="datePublished">2016-01-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/15/how-to-restart-hexo/">换机器后，如何重启启用hexo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先还是参照官方文档，安装<code>hexo</code>：</p>
+<blockquote>
+<p><a href="https://github.com/hexojs/hexo" target="_blank" rel="external">https://github.com/hexojs/hexo</a></p>
+</blockquote>
+<p>然后，其实就是很简单的一段<code>bash</code>脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> clean</span><br><span class="line">hexo clean --debug</span><br><span class="line"><span class="built_in">echo</span> generate</span><br><span class="line">hexo generate --debug</span><br><span class="line"><span class="built_in">echo</span> deploy</span><br><span class="line">hexo deploy --debug</span><br><span class="line">rsync -avz public/ .deploy_git/ --delete --exclude=.git</span><br><span class="line"><span class="built_in">cd</span> .deploy_git/</span><br><span class="line">git add *</span><br><span class="line">git ci -am <span class="string">'commit'</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>试试吧！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jotcmd.com/2016/01/15/how-to-restart-hexo/" data-id="cijf8qj120000gxneg2mm21gr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂文-github-hexo/">杂文,github,hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hi-there" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/05/17/hi-there/" class="article-date">
@@ -92,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jotcmd.com/2015/05/17/hi-there/" data-id="cijf8kcbj0000f2ne00rnjrh2" class="article-share-link">Share</a>
+      <a data-url="http://jotcmd.com/2015/05/17/hi-there/" data-id="cijf8qj2t0003gxnence6g7q5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂文/">杂文</a></li></ul>
@@ -115,7 +160,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文/">杂文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂文-github-hexo/">杂文,github,hexo</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -124,7 +169,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/杂文/" style="font-size: NaNpx;">杂文</a>
+      <a href="/tags/杂文/" style="font-size: NaNpx;">杂文</a><a href="/tags/杂文-github-hexo/" style="font-size: NaNpx;">杂文,github,hexo</a>
     </div>
   </div>
 
@@ -133,7 +178,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -143,6 +188,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/01/15/how-to-restart-hexo/">换机器后，如何重启启用hexo</a>
+          </li>
         
           <li>
             <a href="/2015/05/17/hi-there/">新的征程</a>

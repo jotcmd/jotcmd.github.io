@@ -3,17 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 杂文 | 吉欧塔</title>
+  <title>换机器后，如何重启启用hexo | 吉欧塔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="吉欧塔">
-<meta property="og:url" content="http://jotcmd.com/tags/杂文/index.html">
+  <meta name="description" content="首先还是参照官方文档，安装hexo：
+
+https://github.com/hexojs/hexo
+
+然后，其实就是很简单的一段bash脚本：
+1234567891011echo cleanhexo clean --debugecho generatehexo generate --debugecho deployhexo deploy --debugrsync -avz public/ .de">
+<meta property="og:type" content="article">
+<meta property="og:title" content="换机器后，如何重启启用hexo">
+<meta property="og:url" content="http://jotcmd.com/2016/01/15/how-to-restart-hexo/index.html">
 <meta property="og:site_name" content="吉欧塔">
-<meta property="og:description">
+<meta property="og:description" content="首先还是参照官方文档，安装hexo：
+
+https://github.com/hexojs/hexo
+
+然后，其实就是很简单的一段bash脚本：
+1234567891011echo cleanhexo clean --debugecho generatehexo generate --debugecho deployhexo deploy --debugrsync -avz public/ .de">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="吉欧塔">
-<meta name="twitter:description">
+<meta name="twitter:title" content="换机器后，如何重启启用hexo">
+<meta name="twitter:description" content="首先还是参照官方文档，安装hexo：
+
+https://github.com/hexojs/hexo
+
+然后，其实就是很简单的一段bash脚本：
+1234567891011echo cleanhexo clean --debugecho generatehexo generate --debugecho deployhexo deploy --debugrsync -avz public/ .de">
   
     <link rel="alternative" href="/atom.xml" title="吉欧塔" type="application/atom+xml">
   
@@ -59,39 +74,61 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/05/17/hi-there/" class="archive-article-date">
-  <time datetime="2015-05-17T14:06:43.000Z" itemprop="datePublished">May 17</time>
+        <section id="main"><article id="post-how-to-restart-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/15/how-to-restart-hexo/" class="article-date">
+  <time datetime="2016-01-15T05:21:39.000Z" itemprop="datePublished">2016-01-15</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/17/hi-there/">新的征程</a>
+    <h1 class="article-title" itemprop="name">
+      换机器后，如何重启启用hexo
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先还是参照官方文档，安装<code>hexo</code>：</p>
+<blockquote>
+<p><a href="https://github.com/hexojs/hexo" target="_blank" rel="external">https://github.com/hexojs/hexo</a></p>
+</blockquote>
+<p>然后，其实就是很简单的一段<code>bash</code>脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> clean</span><br><span class="line">hexo clean --debug</span><br><span class="line"><span class="built_in">echo</span> generate</span><br><span class="line">hexo generate --debug</span><br><span class="line"><span class="built_in">echo</span> deploy</span><br><span class="line">hexo deploy --debug</span><br><span class="line">rsync -avz public/ .deploy_git/ --delete --exclude=.git</span><br><span class="line"><span class="built_in">cd</span> .deploy_git/</span><br><span class="line">git add *</span><br><span class="line">git ci -am <span class="string">'commit'</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>试试吧！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jotcmd.com/2016/01/15/how-to-restart-hexo/" data-id="cijf8qj120000gxneg2mm21gr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂文-github-hexo/">杂文,github,hexo</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/05/17/hi-there/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">新的征程</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">
